@@ -1,2 +1,18 @@
-# JuegoAdivinanzaJava
-Desarrollar un programa en java que implemente un juego de adivinanzas de números utilizando ciclos(for, while, do-while) .Además, se utilizara GitHub para el control de versiones del código y Microsoft Planner para la Gestión de tareas y colaboración en equipo. 
+ 
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class JuegoAdivinanza {
+
+    // Función que genera un número aleatorio entre 1 y 100
+    public static int generarNumeroAleatorio() {
+        // ThreadLocalRandom es más moderno y seguro para entornos multihilo que Random
+        return ThreadLocalRandom.current().nextInt(1, 101); // El límite superior es exclusivo
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso de la función
+        int numeroGenerado = generarNumeroAleatorio();
+        System.out.println("Número aleatorio generado (oculto en la versión final del juego): " + numeroGenerado);
+    }
+}
